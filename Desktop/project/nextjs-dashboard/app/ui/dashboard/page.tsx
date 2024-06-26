@@ -1,5 +1,5 @@
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
-import { lusitana } from '@/app/ui/fonts';
+import { Lusitana } from 'next/font/google';
 import { Suspense } from 'react';
 import CardWrapper from '@/app/ui/dashboard/cards';
 import { RevenueChartSkeleton,LatestInvoicesSkeleton,
@@ -8,7 +8,7 @@ import { RevenueChartSkeleton,LatestInvoicesSkeleton,
 export default async function Page() {
   return (
     <main>
-      <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+      <h1 className={`${Lusitana} mb-4 text-xl md:text-2xl`}>
         Dashboard
       </h1>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -20,7 +20,7 @@ export default async function Page() {
         <Suspense fallback={<RevenueChartSkeleton />}>
           <RevenueChart />
         </Suspense>
-         {/* <LatestInvoicesSkeleton LatestInvoicesSkeleton  ={LatestInvoicesSkeleton} /> */} */}
+         {/* <LatestInvoicesSkeleton LatestInvoicesSkeleton  ={LatestInvoicesSkeleton} /> */} 
       </div>
     </main>
   );
