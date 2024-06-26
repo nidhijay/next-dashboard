@@ -2,6 +2,6 @@ import { Inter } from 'next/font/google';
  
 export const inter = Inter({ subsets: ['latin'] });
 
-import { lusitana } from 'next/font/google';
+import { Lusitana } from 'next/font/google';
 
-export { lusitana };
+export const fontLoader = Lusitana;
