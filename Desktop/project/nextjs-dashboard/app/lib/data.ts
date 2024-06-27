@@ -9,6 +9,7 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
+import { invoices } from './placeholder-data';
 
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
@@ -45,7 +46,8 @@ export async function fetchLatestInvoices() {
       ...invoice,
       amount: formatCurrency(invoice.amount),
     }));
-    return latestInvoices;
+    console.log(invoices); 
+    return invoices[0];
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch the latest invoices.');
